@@ -1,0 +1,11 @@
+
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+      <div *ngIf="isLoading">Loading...</div>
+      <ul class="list-unstyled navbar-list" *ngIf="!isLoading">
+        <li *ngFor="let tempProductCategory of productCategories">
+          <a  routerLink="/category/{{tempProductCategory.id}}" routerLinkActive="active-line">{{tempProductCategory.categoryName}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
